@@ -17,7 +17,7 @@ const Demo = () => {
 
     return (
         <div id="example-component">
-            <HotTable root="hot" data={data} colHeaders={true} rowHeaders={true} width="600" height="300" stretchH="all" />
+            <HotTable root="hot" data={data} colHeaders={true} rowHeaders={true} width={600} height={300} stretchH="all" />
         </div>
     )
 }
