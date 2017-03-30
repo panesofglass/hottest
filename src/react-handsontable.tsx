@@ -8,7 +8,7 @@ import "handsontable.css"
 
 export interface Props {
     root?: string
-    settings: any
+    settings: Handsontable.Options
 }
 
 /**

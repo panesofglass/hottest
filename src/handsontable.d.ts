@@ -1,9 +1,9 @@
-// Type definitions for Handsontable 0.30
+// Type definitions for Handsontable 0.31
 // Project: https://handsontable.com/
-// Definitions by: Handsoncode sp. z o.o. <http://handsoncode.net/>
+// Definitions by: Handsoncode sp. z o.o. <http://handsoncode.net/>, Ryan Riley <https://github.com/panesofglass>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped\
 
-declare namespace ht {
+declare namespace Handsontable {
     interface Options {
         allowEmpty?: boolean;
         allowInsertColumn?: boolean;
@@ -450,7 +450,7 @@ declare namespace ht {
         TextEditor: EditorConstructor;
     }
 
-    type Validator = (value: string, callback: (condition: boolean) => void) => void;
+    type Validator = (value: any, callback: (condition: boolean) => void) => void;
 
     interface Renderers {
         TextRenderer: CellRenderer;
@@ -494,19 +494,16 @@ declare namespace ht {
 }
 
 interface Handsontable {
-    new (element: Element, options: ht.Options): ht.Methods;
-    plugins: ht.Plugins;
-    hooks: ht.Hooks;
-    Dom: ht.Dom;
-    dom: ht.Dom;
-    helper: ht.Helper;
-    utils: ht.Utils;
-    renderers: ht.Renderers;
-    editors: ht.Editors;
+    new (element: Element, options: Handsontable.Options): Handsontable.Methods;
+    plugins: Handsontable.Plugins;
+    hooks: Handsontable.Hooks;
+    Dom: Handsontable.Dom;
+    dom: Handsontable.Dom;
+    helper: Handsontable.Helper;
+    utils: Handsontable.Utils;
+    renderers: Handsontable.Renderers;
+    editors: Handsontable.Editors;
 }
 
-declare module "handsontable" {
-    export = Handsontable;
-}
-
-declare var Handsontable: Handsontable;
+export = Handsontable;
+export as namespace Handsontable;
