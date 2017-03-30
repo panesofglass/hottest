@@ -3,7 +3,7 @@ var path = require('path');
 module.exports = {
     entry: {
         app: "./src/index.tsx",
-        vendor: ["react", "react-dom", "handsontable", "react-handsontable"],
+        vendor: ["react", "react-dom", "handsontable"],
     },
     output: {
         filename: "./dist/bundle.js",
