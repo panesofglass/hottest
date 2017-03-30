@@ -1,5 +1,11 @@
 import * as React from "react"
-import HotTable from "./react-handsontable"
+import * as moment from "moment"
+import numbro from "numbro"
+import * as Pikaday from "pikaday"
+import * as Zeroclipboard from "zeroclipboard"
+import * as Handsontable from "handsontable"
+import "handsontable.css"
+import HotTable from "react-handsontable"
 
 const Demo = () => {
     const data = [
@@ -10,16 +16,14 @@ const Demo = () => {
     ]
 
     return (
-        <div id="example-component">
-            <HotTable settings={{
-                data: data,
-                colHeaders: true,
-                rowHeaders: true,
-                width: 600,
-                height: 300,
-                stretchH: "all"
-             }} />
-        </div>
+        <HotTable settings={{
+            data: data,
+            colHeaders: true,
+            rowHeaders: true,
+            width: 600,
+            height: 300,
+            stretchH: "all"
+        }} />
     )
 }
 

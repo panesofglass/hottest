@@ -1560,7 +1560,7 @@ minimist@^1.2.0:
   dependencies:
     minimist "0.0.8"
 
-moment@2.x, moment@>=2.14.0, moment@^2.13.0:
+moment@2.x, moment@>=2.14.0, moment@^2.13.0, moment@^2.17.1:
   version "2.18.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
 
@@ -1689,7 +1689,7 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-numbro@^1.8.0:
+numbro@^1.8.0, numbro@^1.9.3:
   version "1.10.1"
   resolved "https://registry.yarnpkg.com/numbro/-/numbro-1.10.1.tgz#270beed50f8c0322b02429c58128ddf5d58e06fd"
 
@@ -1831,7 +1831,7 @@ pify@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
 
-pikaday@^1.4.0:
+pikaday@^1.4.0, pikaday@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/pikaday/-/pikaday-1.5.1.tgz#0a48549bc1a14ea1d08c44074d761bc2f2bfcfd3"
   optionalDependencies:
@@ -2187,6 +2187,16 @@ react-dom@^15.4.2:
     fbjs "^0.8.1"
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
+
+react-handsontable@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/react-handsontable/-/react-handsontable-0.2.1.tgz#ed4c0d7df9bbc74435f394a9b90151a55717de90"
+  dependencies:
+    handsontable "^0.31.1"
+    moment "^2.17.1"
+    numbro "^1.9.3"
+    pikaday "^1.5.1"
+    zeroclipboard "^2.3.0"
 
 react@^15.4.2:
   version "15.4.2"
@@ -2869,6 +2879,6 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-zeroclipboard@^2.2.0:
+zeroclipboard@^2.2.0, zeroclipboard@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/zeroclipboard/-/zeroclipboard-2.3.0.tgz#592ebd833a4308688b0739697d3dbf989002c9af"
