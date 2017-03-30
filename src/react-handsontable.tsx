@@ -49,7 +49,7 @@ export default class HotTable extends React.Component<Props, {}> {
     componentDidMount() {
         console.log("Is Handsontable loaded?", Handsontable)
         const newSettings = this.props.settings
-        this.hotInstance = new Handsontable(document.getElementById(this.root) as Element, newSettings)
+        this.hotInstance = Handsontable(document.getElementById(this.root) as Element, newSettings)
     }
 
     /**
