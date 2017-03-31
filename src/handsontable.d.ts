@@ -3,7 +3,7 @@
 // Definitions by: Handsoncode sp. z o.o. <http://handsoncode.net/>, Ryan Riley <https://github.com/panesofglass>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped\
 
-declare namespace ht {
+declare namespace Handsontable {
     interface Options {
         allowEmpty?: boolean;
         allowInsertColumn?: boolean;
@@ -450,7 +450,7 @@ declare namespace ht {
         TextEditor: EditorConstructor;
     }
 
-    type Validator = (value: string, callback: (condition: boolean) => void) => void;
+    type Validator = (value: any, callback: (condition: boolean) => void) => void;
 
     interface Renderers {
         TextRenderer: CellRenderer;
@@ -493,16 +493,16 @@ declare namespace ht {
     type DropdownColumn = AutocompleteColumn;
 }
 
-declare class Handsontable implements ht.Methods {
-    constructor (element: Element, options: ht.Options);
-    static plugins: ht.Plugins;
-    static hooks: ht.Hooks;
-    static Dom: ht.Dom;
-    static dom: ht.Dom;
-    static helper: ht.Helper;
-    static utils: ht.Utils;
-    static renderers: ht.Renderers;
-    static editors: ht.Editors;
+declare class Handsontable implements Handsontable.Methods {
+    constructor (element: Element, options: Handsontable.Options);
+    static plugins: Handsontable.Plugins;
+    static hooks: Handsontable.Hooks;
+    static Dom: Handsontable.Dom;
+    static dom: Handsontable.Dom;
+    static helper: Handsontable.Helper;
+    static utils: Handsontable.Utils;
+    static renderers: Handsontable.Renderers;
+    static editors: Handsontable.Editors;
     addHook(key: string, callback: Function|any[]): void;
     addHookOnce(key: string, callback: Function|any[]): void;
     alter(action: string, index: number, amount?: number, source?: string, keepEmptyRows?: boolean): void;
@@ -545,8 +545,8 @@ declare class Handsontable implements ht.Methods {
     getRowHeight(row: number): number;
     getSchema(): Object;
     getSelected(): any[];
-    getSelectedRange(): ht.Range;
-    getSettings(): ht.Options;
+    getSelectedRange(): Handsontable.Range;
+    getSettings(): Handsontable.Options;
     getSourceData(r?: number, c?: number, r2?: number, c2?: number): any[];
     getSourceDataAtCell(row: number, column: number): any;
     getSourceDataAtCol(column: number): any[];
@@ -584,6 +584,5 @@ declare class Handsontable implements ht.Methods {
     validateCells(callback: Function): void;
 }
 
-declare module "handsontable" {
-    export = Handsontable;
-}
+export = Handsontable;
+export as namespace Handsontable;
